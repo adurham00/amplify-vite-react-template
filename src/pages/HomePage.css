@@ -8,6 +8,15 @@ nav {
   margin: 0;
 }
 
+.HomePage-container {
+  display: flex;
+  flex-direction: column;  /* stacks elements vertically */
+  align-items: center;     /* centers children horizontally */
+  /* optional: add some vertical spacing */
+  gap: 2rem;
+}
+
+
 .TitleHeader {
   display: flex; 
   justify-content: center;

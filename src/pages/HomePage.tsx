@@ -2,6 +2,7 @@
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './HomePage.css'; // This line imports your CSS file
 import { useEffect, useState } from 'react';
+import ImageCarousel from './ImageCarousel';
 import './ImageCarousel.css';
 
 function HomePage() {
@@ -25,9 +26,7 @@ function HomePage() {
 </div>
 
 
-<div className="Imagebox">
-
-</div>
+<ImageCarousel/>
 
 
 
