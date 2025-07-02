@@ -1,8 +1,6 @@
 // src/pages/HomePage.tsx
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import { useEffect, useState } from 'react';
-import ImageCarousel from './ImageCarousel';
 import './ImageCarousel.css';
 
 function HomePage() {
