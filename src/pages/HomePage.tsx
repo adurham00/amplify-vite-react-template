@@ -1,7 +1,8 @@
 // src/pages/HomePage.tsx
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import './HomePage.css'; // This line imports your CSS file
-
+import { useEffect, useState } from 'react';
+import './ImageCarousel.css';
 
 function HomePage() {
   return (
@@ -16,9 +17,23 @@ function HomePage() {
             {/* You can add more navigation links here as you create new pages */}
           </ul>
          </nav>
-      </div>
-    <h1>DurhamDesigns</h1>
-  </div>
+       </div>
+
+
+<div className="TitleHeader">
+  <h1>Abigail Durham</h1>
+</div>
+
+
+<div className="Imagebox">
+
+</div>
+
+
+
+</div>   
+
+
     );
   }
 
