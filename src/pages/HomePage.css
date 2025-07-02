@@ -1,11 +1,66 @@
 /* homepage.css */
 
-body{
-  display:flex;
-  flex-direction: column;
-  min-height: 100vh
-  margin 0;
-  padding: 0;
-  background-color: red;
+body {
+ margin: 0;
+}
+
+nav {
+  margin: 0;
+}
+
+
+.header-content {
+    display: flex;
+  justify-content: space-between; /* spaces nav and h1 */
+  align-items: center;            /* aligns them vertically */
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.main-nav-list li a {
+  text-decoration: none;
+  color: #1a1a1a;         /* or whatever color you want */
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.main-nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 9rem;
+  list-style: none;
+  margin: 0;
+  padding: 5rem 8rem 0.5rem 8rem; /* More top padding */
+  border: 2px solid #F9F7F3;
+  border-radius: 0 0 8px 8px;       /* Rounded only on bottom corners */
+  background-color: #F9F7F3;
+  width: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.nav-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.header-content h1 {
+
+}
+
+.main-nav-list li a {
+
+}
+
+.main-nav-list li a:hover {
 
 }
