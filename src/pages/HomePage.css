@@ -40,7 +40,7 @@
 .portfolio {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 9rem;
 }
 
 .portfolio-row {
@@ -49,20 +49,22 @@
   gap: 2rem;
 }
 
-.portfolio-row.reverse {
+.portfolio-row.reverse  {
   flex-direction: row-reverse;
+  
 }
 
 .image-box {
-  width: 200px;
-  height: 200px;
+  width: 600px;
+  height: 600px;
   background-color: lightgray;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
+  
 }
 
 .text-box {
-  max-width: 500px;
+  max-width: 900px;
 }
 
 .text-box h2 {

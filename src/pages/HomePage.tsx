@@ -9,22 +9,28 @@ function HomePage() {
   const portfolioItems = [
     {
       id: 1,
-      title: 'ABIGAIL DURHAM',
+      title: 'Portfolio 1',
       subtitle: 'ABIGAIL DURHAM',
       description: 'Lorem ipsum dolor sit amet... (etc)',
     },
     {
       id: 2,
-      title: 'ABIGAIL DURHAM',
+      title: 'Portfolio 2',
       subtitle: 'ABIGAIL DURHAM',
       description: 'Second item description text...',
     },
     {
       id: 3,
-      title: 'ABIGAIL DURHAM',
+      title: 'Portfolio 3',
       subtitle: 'ABIGAIL DURHAM',
       description: 'Third item description text...',
     },
+   {
+      id: 3,
+      title: 'Portfolio 4',
+      subtitle: 'ABIGAIL DURHAM',
+      description: 'Third item description text...',
+    },  
   ];
 
   return (
