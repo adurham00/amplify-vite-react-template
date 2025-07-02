@@ -5,8 +5,8 @@ import './HomePage.css'; // This line imports your CSS file
 
 function HomePage() {
   return (
-    <div className="HomePage-container">
-      <h1>Welcome to My Awesome App!</h1>
+    <div>
+      <h1>DurhamDesigns</h1>
       <p>This is the landing page for your Amplify-powered application.</p>
       <nav>
         <ul style={{ listStyle: 'none', padding: 0, display: 'flex', gap: '15px' }}>
