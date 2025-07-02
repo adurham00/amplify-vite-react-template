@@ -5,8 +5,7 @@ import './HomePage.css'; // This line imports your CSS file
 
 function HomePage() {
   return (
-
-      <div className="header-content">
+    <div className="HomePage-container">
         <div className="nav-wrapper">
         <nav>
           <ul className="main-nav-list">
@@ -16,10 +15,10 @@ function HomePage() {
             <li><Link to="/about">Resume</Link></li>
             {/* You can add more navigation links here as you create new pages */}
           </ul>
-        </nav>
-        </div>
-        <h1>DurhamDesigns</h1>
+         </nav>
       </div>
+    <h1>DurhamDesigns</h1>
+  </div>
     );
   }
 
