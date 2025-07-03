@@ -42,11 +42,12 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px; /* matches the card’s corners */
+  border: 2px solid #e9c0c07a;
+
+  border-radius: 8px; /* matches the card’s corners */
   display: block;
   
 }
-
 
 .flip-card-back {
   background-color: #ddd;

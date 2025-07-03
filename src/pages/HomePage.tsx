@@ -22,12 +22,21 @@ function HomePage() {
       </ul>
     </nav>
     <section className="grid">
-    <FlipCard/>
-    <FlipCard/>
-    <FlipCard/>
-    <FlipCard/>
-    <FlipCard/>
-    <FlipCard/>
+    <FlipCard 
+        image="/images/photo1.jpg" 
+        alt="Project 1" 
+        content="This is the first project." 
+      />
+      <FlipCard 
+        image="/images/photo2.jpg" 
+        alt="Project 2" 
+        content="This is the second project." 
+      />
+      <FlipCard 
+        image="/images/photo3.jpg" 
+        alt="Project 3" 
+        content="This is the third project." 
+      />
   </section>
   </div>
 </div>

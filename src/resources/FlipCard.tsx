@@ -1,15 +1,23 @@
+// FlipCard.tsx
 import './FlipCard.css';
 
+type FlipCardProps = {
+  image: string;
+  alt: string;
+  content: string;
+};
 
-function FlipCard() {
+function FlipCard({ image, alt, content }: FlipCardProps) {
   return (
     <div className="flip-card">
       <div className="flip-card-inner">
+        <div className="rounded-wrapper"></div>
         <div className="flip-card-front">
-          <img src="/images/photo1.jpg" alt="Front Side" />
+          <div className="image-border-wrapper"></div>
+          <img src={image} alt={alt} />
         </div>
         <div className="flip-card-back">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>{content}</p>
         </div>
       </div>
     </div>
