@@ -89,3 +89,12 @@
   height: auto;
   flex-shrink: 0;
 }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 6rem;
+  padding: 3rem;
+  max-width: 1600px; /* caps layout to fit 3 cards max */
+  margin: 0 auto; /* centers the grid */
+}

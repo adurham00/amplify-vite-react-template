@@ -1,7 +1,8 @@
 // src/pages/HomePage.tsx
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import './ImageCarousel.css';
+import FlipCard from '../resources/FlipCard';
+
 
 function HomePage() {
  
@@ -22,7 +23,13 @@ function HomePage() {
   </div>
 
   {/* Portfolio Grid */}
-  <section className="portfolio">
+  <section className="grid">
+    <FlipCard/>
+    <FlipCard/>
+    <FlipCard/>
+    <FlipCard/>
+    <FlipCard/>
+    <FlipCard/>
   </section>
 </div>
 
