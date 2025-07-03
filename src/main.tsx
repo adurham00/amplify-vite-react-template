@@ -5,7 +5,7 @@ import outputs from "./amplify_outputs.json";
 import ReactDOM from "react-dom/client";
 import App from "./App.tsx";
 
-// Amplify.configure(outputs);
+Amplify.configure(outputs);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
       <App />
