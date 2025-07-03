@@ -4,11 +4,7 @@ import './HomePage.css';
 import './ImageCarousel.css';
 
 function HomePage() {
-  const portfolioItems = [
-    {
-    }
-  ];
-
+ 
   return (
    <div className="HomePage-container">
   <div className="header-nav-group">
