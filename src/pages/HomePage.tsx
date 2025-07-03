@@ -7,7 +7,7 @@ import FlipCard from '../resources/FlipCard';
 function HomePage() {
  
   return (
-   <div className="HomePage-container">
+  <div className="HomePage-container">
   <div className="header-nav-group">
     <header className="TitleHeader">
       <h1>ABIGAIL<br />DURHAM</h1>
@@ -20,10 +20,7 @@ function HomePage() {
         <li><Link to="#">Gallery</Link></li>
       </ul>
     </nav>
-  </div>
-
-  {/* Portfolio Grid */}
-  <section className="grid">
+    <section className="grid">
     <FlipCard/>
     <FlipCard/>
     <FlipCard/>
@@ -31,6 +28,7 @@ function HomePage() {
     <FlipCard/>
     <FlipCard/>
   </section>
+  </div>
 </div>
 
   

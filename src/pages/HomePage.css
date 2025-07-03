@@ -91,10 +91,11 @@
 }
 
 .grid {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 6rem;
-  padding: 3rem;
-  max-width: 1600px; /* caps layout to fit 3 cards max */
-  margin: 0 auto; /* centers the grid */
+  gap: 4vh;
+  row-gap: 8vh;
+  padding: 3vh;
+  max-width: 100%; /* caps layout to fit 3 cards max */
 }
