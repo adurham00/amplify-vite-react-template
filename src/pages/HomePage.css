@@ -22,7 +22,7 @@
 
 @font-face {
   font-family: 'YourCustomFont3';
-  src: url('./Fonts/Font11.ttf') format('opentype');
+  src: url('./Fonts/Font10.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -83,13 +83,13 @@ body {
   text-decoration: none;
   color: black;
   font-weight: 520;
-  font-size: clamp(1.5rem, 3.5vw, 4rem);
+  font-size: clamp(1.5rem, 3vw, 4rem);
   white-space: nowrap;
   transition: color 0.3s ease;
 }
 
 .main-nav-list li a:hover {
-  color: #555;
+  color: #bbbbbb;
 }
 
 /* === Portfolio Section === */
