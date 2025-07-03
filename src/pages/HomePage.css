@@ -66,35 +66,19 @@
 
 /* Left image boxes */
 .image-box-left {
-  margin-left: -20rem;
+  margin-left: -10rem;
 }
 
 /* Right image boxes (in .reverse rows) */
 .image-box-right {
-  margin-right: -20rem;
+  margin-right: -10rem;
 }
 
 
 .text-box-left,
 .text-box-right {
-  width: 60%;
+  width: 50%;
   height: 750px;
   flex-shrink: 0;
 }
 
-.text-box h2 {
-  margin: 0;
-  font-size: 2.25rem;
-}
-
-.text-box h3 {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  font-weight: 400;
-  color: gray;
-}
-
-.text-box p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
