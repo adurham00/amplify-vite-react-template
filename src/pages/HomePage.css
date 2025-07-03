@@ -1,242 +1,100 @@
-/* --- General Container and Typography --- */
 .HomePage-container {
-    font-family: sans-serif;
-    max-width: 1200px; 
-    width: 90%; 
-    margin: 0 auto;
-    padding: 2rem; 
-    box-sizing: border-box; 
+  font-family: sans-serif;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 .TitleHeader {
-    text-align: center;
-    margin-bottom: 5rem; 
+  text-align: center;
+  margin-bottom: 6rem;
 }
 
 .TitleHeader h1 {
-    font-size: 3rem; 
-    line-height: 1.2;
+  font-size: 8rem;
+  line-height: 1;
 }
 
-/* --- Navigation --- */
 .nav-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 8rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8rem;
 }
 
 .main-nav-list {
-    display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    gap: 2rem 4rem; 
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  gap: 3rem;
+  list-style: none;Z
+  padding: 0;
+  margin: 0;
 }
 
 .main-nav-list li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 500;
-    font-size: 1.25rem; 
-    white-space: nowrap;
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  font-size: 2rem;
 }
 
-/* --- Portfolio Section --- */
+/* === Portfolio Section === */
 .portfolio {
-    display: flex;
-    flex-direction: column;
-    gap: 6rem; 
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
 }
 
 .portfolio-row {
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 3rem;
-    flex-wrap: wrap; 
+  display: flex;
+  align-items: flex-start;
+  gap: 8rem;
 }
 
-.portfolio-row.reverse {
-    flex-direction: column; 
+.portfolio-row.reverse  {
+  flex-direction: row-reverse;
+  
 }
 
 .image-box-left,
 .image-box-right {
-    width: 80%; 
-    max-width: 600px;
-    height: 400px;
-    background-color: lightgray;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-    flex-shrink: 1;
-    flex-grow: 0;
-    object-fit: cover; 
-    margin: 0 !important; 
-    transform: none !important; 
+  width: 50%;
+  height: auto;
+  background-color: lightgray;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+  flex-shrink: 0;
+  padding-bottom: 75%
 }
 
-/* For actual images, you'd use something like this for aspect ratio: */
-/*
-.image-box-left img,
-.image-box-right img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Left image boxes */
+.image-box-left {
+  margin-left: -20rem;
 }
-*/
+
+/* Right image boxes (in .reverse rows) */
+.image-box-right {
+  margin-right: -20rem;
+}
+
 
 .text-box-left,
 .text-box-right {
-    max-width: 90%;
-    text-align: center; 
-    margin: 0 !important; 
-    transform: none !important; 
-    flex-grow: 1;
-    flex-shrink: 1; 
+  width: 60%;
+  height: 750px;
+  flex-shrink: 0;
 }
 
-.text-box-left h2,
-.text-box-right h2 {
-    margin: 0;
-    font-size: 1.8rem; 
+.text-box h2 {
+  margin: 0;
+  font-size: 2.25rem;
 }
 
-.text-box-left h3,
-.text-box-right h3 {
-    margin: 0.5rem 0;
-    font-size: 1.2rem; 
-    font-weight: 400;
-    color: gray;
+.text-box h3 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: gray;
 }
 
-.text-box-left p,
-.text-box-right p {
-    font-size: 1rem; 
-    line-height: 1.5;
-}
-
-
-
-@media (min-width: 768px) { 
-    .HomePage-container {
-        padding: 3rem; 
-    }
-
-    .TitleHeader h1 {
-        font-size: 4rem; 
-    }
-
-    .main-nav-list {
-        gap: 6rem; 
-    }
-
-    .main-nav-list li a {
-        font-size: 1.5rem; 
-    }
-
-    .portfolio-row {
-        flex-direction: row; 
-        align-items: flex-start; 
-        gap: 5rem; 
-
-    .portfolio-row.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .image-box-left,
-    .image-box-right {
-        width: 500px;
-        height: 650px; 
-        flex-shrink: 0;
-        flex-basis: auto; 
-    }
-
-    /* Restore original negative margins and transforms for larger screens */
-    .image-box-left {
-        margin-left: -10rem; 
-    }
-
-    .image-box-right {
-        margin-right: -10rem; 
-    }
-
-    .text-box-left {
-        text-align: left;
-        margin-left: -10rem; 
-        transform: translateX(10rem);
-        max-width: 600px; 
-    }
-
-    .text-box-right {
-        text-align: left;
-        margin-left: -10rem; 
-        transform: translateX(-3.5rem); 
-        max-width: 600px; 
-    }
-
-    .text-box-left h2,
-    .text-box-right h2 {
-        font-size: 2.25rem !important; 
-    }
-
-    .text-box-left h3,
-    .text-box-right h3 {
-        font-size: 1.5rem;
-    }
-
-    .text-box-left p,
-    .text-box-right p {
-        font-size: 1.25rem; 
-    }
-}
-
-@media (min-width: 1200px) { 
-    .HomePage-container {
-        padding: 5rem; 
-    }
-
-    .TitleHeader h1 {
-        font-size: 5rem; 
-    }
-
-    .nav-wrapper {
-        margin-bottom: 15rem;
-    }
-
-    .main-nav-list {
-        gap: 12rem; 
-    }
-
-    .portfolio {
-        gap: 9rem; 
-    }
-
-    .portfolio-row {
-        gap: 8rem; 
-    }
-
-    .image-box-left,
-    .image-box-right {
-        width: 600px;
-        height: 750px; 
-    }
-
-    .image-box-left {
-        margin-left: -20rem; 
-    }
-
-    .image-box-right {
-        margin-right: -20rem; 
-    }
-
-    .text-box-left {
-        margin-left: -17.25rem; 
-        transform: translateX(19.5rem); 
-    }
-
-    .text-box-right {
-        margin-left: -17.25rem; 
-        transform: translateX(-3.5rem); 
-    }
+.text-box p {
+  font-size: 0.95rem;
+  line-height: 1.4;
 }
