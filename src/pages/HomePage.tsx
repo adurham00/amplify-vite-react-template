@@ -1,7 +1,7 @@
 // src/pages/HomePage.tsx
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import FlipCard from '../resources/FlipCard';
+/* import FlipCard from '../resources/FlipCard'; */
 
 
 function HomePage() {
@@ -21,12 +21,12 @@ function HomePage() {
       </ul>
     </nav>
     <section className="grid">
+    {/* <FlipCard/>
     <FlipCard/>
     <FlipCard/>
     <FlipCard/>
     <FlipCard/>
-    <FlipCard/>
-    <FlipCard/>
+    <FlipCard/> */}
   </section>
   </div>
 </div>
