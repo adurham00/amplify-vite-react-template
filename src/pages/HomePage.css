@@ -1,10 +1,45 @@
 /* === Base Layout === */
 .HomePage-container {
-  font-family: sans-serif;
   max-width: 90%;
   margin: 0 auto;
   padding: 6rem;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'YourCustomFont';
+  src: url('./Fonts/Font2.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourCustomFont2';
+  src: url('./Fonts/Font6.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YourCustomFont3';
+  src: url('./Fonts/Font11.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #f8f8f8; /* A very light base color for the paper */
+
+}
+
+.spaced-header1 {
+  font-family: 'YourCustomFont', serif;
+  letter-spacing: 0.25em; /* Adjust as needed */
+}
+
+.spaced-header2 {
+  font-family: 'YourCustomFont', serif;
+  letter-spacing: 0.35em; /* Adjust as needed */
 }
 
 /* === Header & Nav Group === */
@@ -44,10 +79,11 @@
 }
 
 .main-nav-list li a {
+  font-family: 'YourCustomFont3', sans-serif;
   text-decoration: none;
   color: black;
-  font-weight: 500;
-  font-size: clamp(1.5rem, 1vw, 2rem);
+  font-weight: 520;
+  font-size: clamp(1.5rem, 3.5vw, 4rem);
   white-space: nowrap;
   transition: color 0.3s ease;
 }
