@@ -1,30 +1,44 @@
+/* === Base Layout === */
 .HomePage-container {
   font-family: sans-serif;
-  max-width: 50%;
+  max-width: 90%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 6rem;
+  box-sizing: border-box;
 }
 
+/* === Header & Nav Group === */
+.header-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6rem;
+  margin-bottom: 8rem;
+}
+
+/* === Title Header === */
 .TitleHeader {
   text-align: center;
-  margin-bottom: 6rem;
 }
 
 .TitleHeader h1 {
-  font-size: 8rem;
+  font-size: clamp(4rem, 3vw, 6rem);
   line-height: 1;
+  margin: 0;
 }
 
+/* === Navigation === */
 .nav-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 8rem;
+  width: 100%;
 }
 
 .main-nav-list {
   display: flex;
-  gap: 3rem;
-  list-style: none;Z
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(1rem, 8vw, 5rem);
+  list-style: none;
   padding: 0;
   margin: 0;
 }
@@ -33,7 +47,13 @@
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 1vw, 2rem);
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.main-nav-list li a:hover {
+  color: #555;
 }
 
 /* === Portfolio Section === */
@@ -49,9 +69,8 @@
   gap: 8rem;
 }
 
-.portfolio-row.reverse  {
+.portfolio-row.reverse {
   flex-direction: row-reverse;
-  
 }
 
 .image-box-left,
@@ -61,24 +80,12 @@
   background-color: lightgray;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  padding-bottom: 75%
+  padding-bottom: 75%;
 }
-
-/* Left image boxes */
-.image-box-left {
-  margin-left: -10rem;
-}
-
-/* Right image boxes (in .reverse rows) */
-.image-box-right {
-  margin-right: -10rem;
-}
-
 
 .text-box-left,
 .text-box-right {
   width: 50%;
-  height: 750px;
+  height: auto;
   flex-shrink: 0;
 }
-
