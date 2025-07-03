@@ -2,23 +2,23 @@
   font-family: sans-serif;
   max-width: 900px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 5rem;
 }
 
 .TitleHeader {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 8rem;
 }
 
 .TitleHeader h1 {
-  font-size: 3rem;
+  font-size: 8rem;
   line-height: 1;
 }
 
 .nav-wrapper {
   display: flex;
   justify-content: center;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
 
 .main-nav-list {
@@ -33,7 +33,7 @@
   text-decoration: none;
   color: black;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 2rem;
 }
 
 /* === Portfolio Section === */
@@ -46,7 +46,7 @@
 .portfolio-row {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 8rem;
 }
 
 .portfolio-row.reverse  {
@@ -54,22 +54,46 @@
   
 }
 
-.image-box {
+.image-box-left,
+.image-box-right {
   width: 600px;
-  height: 600px;
+  height: 750px;
   background-color: lightgray;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
-  
 }
 
-.text-box {
-  max-width: 900px;
+/* Left image boxes */
+.image-box-left {
+  margin-left: -20rem;
 }
+
+/* Right image boxes (in .reverse rows) */
+.image-box-right {
+  margin-right: -20rem;
+}
+
+
+.text-box-left {
+  max-width: 900px;
+  text-align: left;
+  align-items: flex-start;
+  margin-left: -12rem;
+  transform: translateX(16rem);
+}
+
+.text-box-right {
+  max-width: 900px;
+  text-align: left;
+  align-items: flex-end;
+  margin-left: -12rem;
+  transform: translateX(-8rem);
+}
+
 
 .text-box h2 {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 2.25rem;
 }
 
 .text-box h3 {
