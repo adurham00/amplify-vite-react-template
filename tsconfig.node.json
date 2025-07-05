@@ -3,6 +3,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "composite": true,
+    "jsx": "react-jsx",
     "skipLibCheck": true,
     "module": "ESNext",
     "moduleResolution": "bundler",
