@@ -8,21 +8,21 @@
 
 @font-face {
   font-family: 'YourCustomFont';
-  src: url('./Fonts/Font2.otf') format('opentype');
+  src: url('/Fonts/Font2.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'YourCustomFont2';
-  src: url('./Fonts/Font6.ttf') format('opentype');
+  src: url('/Fonts/Font6.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'YourCustomFont3';
-  src: url('./Fonts/Font10.ttf') format('opentype');
+  src: url('/Fonts/Font10.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
