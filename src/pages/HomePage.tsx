@@ -1,7 +1,6 @@
 // src/pages/HomePage.tsx
 import { Link } from 'react-router-dom';
 import './HomePage.css';
-import FlipCard from '../resources/FlipCard'; 
 
 
 function HomePage() {
@@ -21,23 +20,6 @@ function HomePage() {
         <li><Link to="#">gallery</Link></li>
       </ul>
     </nav>
-    <section className="grid">
-    <FlipCard 
-        image="/images/photo1.jpg" 
-        alt="Project 1" 
-        content="This is the first project." 
-      />
-      <FlipCard 
-        image="/images/photo2.jpg" 
-        alt="Project 2" 
-        content="This is the second project." 
-      />
-      <FlipCard 
-        image="/images/photo3.jpg" 
-        alt="Project 3" 
-        content="This is the third project." 
-      />
-  </section>
   </div>
 </div>
 
