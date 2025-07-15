@@ -21,6 +21,19 @@ function HomePage() {
       </ul>
     </nav>
   </div>
+  <div className="photo-frame-container">
+    <div className="photo-frame-wrapper">
+    <div className="photo-frame">
+      <img src="./images/abigail-durham-portrait.jpg" alt="Abigail Durham" width="550px"/>
+    </div>
+  </div>
+  <div className="content-wrapper">
+    <p className="content-text">
+      Abigail Durham is a creative professional with a passion for design and storytelling. 
+      Explore her work and connect through the links above.
+    </p>
+    </div>
+  </div>
 </div>
 
   

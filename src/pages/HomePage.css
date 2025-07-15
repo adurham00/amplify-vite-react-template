@@ -27,6 +27,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'YourCustomFont4';
+  src: url('/Fonts/Colombia-1.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background-color: #f8f8f8; /* A very light base color for the paper */
 
@@ -83,7 +90,7 @@ body {
   text-decoration: none;
   color: black;
   font-weight: 520;
-  font-size: clamp(1.5rem, 3vw, 4rem);
+  font-size: clamp(2.5rem, 3vw, 4rem);
   white-space: nowrap;
   transition: color 0.3s ease;
 }
@@ -126,12 +133,133 @@ body {
   flex-shrink: 0;
 }
 
-.grid {
-  box-sizing: border-box;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 4vh;
-  row-gap: 8vh;
-  padding: 3vh;
-  max-width: 100%; /* caps layout to fit 3 cards max */
+body {
+  background-color: #ffffff; 
+  background-image:
+    linear-gradient(to right, #f0f0f0 1px, transparent 1px), /* Vertical lines */
+    linear-gradient(to bottom, #f0f0f0 1px, transparent 1px); /* Horizontal lines */
+  background-size: 40px 40px; /* This controls the size of each grid square */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  background-color: transparent; /* Essential for the grid to show through */
+}
+
+/* --- Photo Frame Container (for overall positioning) --- */
+.photo-frame-container {
+  margin-top: 2rem;
+  margin-bottom: 2rem; /* Add some space below the frame */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* --- Photo Frame Wrapper (for flutter and tape/pin positioning) --- */
+.photo-frame-wrapper {
+  position: relative; /* Crucial for positioning tape/pins relative to this wrapper */
+  display: inline-block; /* Makes wrapper only as big as its content */
+  /* Animation properties for flutter effect */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform-origin: center center; /* Ensure rotation is from the center */
+  will-change: transform; /* Hint to the browser for performance */
+}
+
+/* Flutter Effect on Hover */
+.photo-frame-wrapper:hover {
+  animation: flutter 1.5s ease-in-out infinite alternate; /* Apply flutter animation */
+  transform: scale(1.01); /* Subtle slight scale on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@keyframes flutter {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-1px) rotate(0.5deg); } /* Slight up and rotate */
+  50% { transform: translateY(0) rotate(-0.5deg); } /* Back to center, opposite rotate */
+  75% { transform: translateY(-1px) rotate(0.5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+
+/* --- Actual Photo Frame Styles --- */
+.photo-frame {
+  width: 450px; /* Adjust inner frame width */
+  height: 350px; /* Adjust inner frame height - kept square for portrait */
+  border: 8px solid #a3a8957d;/* Inner frame color - light cream/paper-like */
+  border-radius: 2px; 
+  background-color: #ffffff; /* Matches inner frame color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  overflow: hidden; /* Keep image inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.framed-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Crop image to fill frame */
+  display: block;
+}
+
+/* --- TAPE STYLES (Option A) --- */
+.photo-frame-wrapper::before,
+.photo-frame-wrapper::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(191, 209, 189, 0.7); /* Light blue painter's tape, semi-transparent */
+  width: 60px; /* Width of the tape piece */
+  height: 20px; /* Height of the tape piece */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for tape */
+}
+
+/* Top-left tape */
+.photo-frame-wrapper::before {
+  top: -10px; /* Position slightly above the frame */
+  left: -15px; /* Position slightly to the left */
+  transform: rotate(-10deg); /* Angle the tape */
+}
+
+/* Bottom-right tape */
+.photo-frame-wrapper::after {
+  bottom: -10px; /* Position slightly below the frame */
+  right: -15px; /* Position slightly to the right */
+  transform: rotate(10deg); /* Angle the tape */
+}
+
+
+/* --- Caption Styles --- */
+.content-text {
+  margin-top: 4rem;
+  font-size: 2rem;
+  color: #666;
+  font-family: 'YourCustomFont4', serif; /* Use the custom font */
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+  .photo-frame {
+    width: 450px;
+    height: 350px;
+    border-width: 6px;
+  }
+  .photo-frame-wrapper::before,
+  .photo-frame-wrapper::after {
+    width: 40px;
+    height: 15px;
+  }
+  .photo-frame-wrapper::before {
+    top: -8px;
+    left: -10px;
+  }
+  .photo-frame-wrapper::after {
+    bottom: -8px;
+    right: -10px;
+  }
 }
