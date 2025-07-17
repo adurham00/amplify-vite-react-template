@@ -1,0 +1,91 @@
+/* === Global Resets & Base Styles === */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+}
+
+body {
+    background-color: #ffffff; /* Primary background for the page */
+    /* Assuming 'leaves.jpg' is a general background for the whole site */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Use fixed to cover the entire viewport, even on scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('public/images/leaves.jpg');
+    background-size: cover; /* Controls the size of each grid square */
+    background-repeat: never-repeat; /* Changed to repeat based on previous discussion */
+    opacity: 0.07; /* <--- Adjust this value for the desired transparency */
+    z-index: -1; /* Place it behind all other content */
+    pointer-events: none; /* Allows clicks to pass through to elements below */
+}
+
+/* Main Page Container - #root acts as the main wrapper for content */
+/* This is often a global container for single-page applications */
+#root {
+    max-width: 1280px; /* Limits content width */
+    margin: 0 auto; /* Centers the content container */
+    padding: 2rem; /* Padding around the main content area */
+    text-align: center; /* Centers inline/inline-block content by default */
+    position: relative; /* Allows for z-index or absolute positioning of children if needed */
+    z-index: 1; /* Ensures content is above background grid if needed */
+}
+
+/* --- */
+
+/* === Custom Fonts === */
+/* These custom fonts are likely used across different components/pages */
+@font-face {
+    font-family: 'YourCustomFont';
+    src: url('/Fonts/Font2.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YourCustomFont2';
+    src: url('/Fonts/Font6.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YourCustomFont3';
+    src: url('/Fonts/Font10.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'YourCustomFont4';
+    src: url('/Fonts/Colombia-1.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* --- */
+
+/* === Navigation Link Base Styles (if applicable globally) === */
+/* If .home-link and main-nav-list styles apply to all navigation throughout the site,
+   they can stay here. If this specific navigation is only for the home page, move to HomePage.css */
+.home-link {
+    text-decoration: none; /* Removes underline from the link */
+    color: inherit; /* Inherits color from parent, ensuring consistency */
+}
+
+.main-nav-list li a {
+    text-decoration: none; /* Removes underline from links */
+    color: black;
+    font-weight: 520; /* Specific font weight */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.main-nav-list li a:hover {
+    color: #bbbbbb; /* Hover color */
+}

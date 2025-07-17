@@ -1,0 +1,106 @@
+.aboutcontent-text {
+  font-family: 'YourCustomFont4', serif;
+  font-size: clamp(1rem, 2.5vw, 1.55rem);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.aboutmain-content {
+  display: flex;
+  flex-direction: row; /* Arranges items horizontally */
+  align-items: flex-start; /* Aligns items to the top (vertical alignment for a row) */
+  justify-content: center; /* Centers the row content horizontally if there's extra space */
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if space is insufficient */
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1.5rem;
+}
+
+.aboutcontent-wrapper {
+  max-width: 600px; /* Max width for the text content on large screens */
+  flex: 1 1 50%; /* Allows shrinking, growing, and a preferred width (starts at 50%) */
+  min-width: 400px; /* <--- KEY CHANGE: Increased min-width to prevent it from getting too small. Adjust as needed. */
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  order: 1; /* <--- KEY CHANGE: Put text on the left for default (row) layout */
+}
+
+.aboutphoto-frame-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 350px; /* Allows shrinking, growing, and a preferred width for the image. */
+  margin-bottom: 0;
+  min-width: 300px; /* Ensure photo frame doesn't get too small before wrapping. */
+  order: 2; /* <--- KEY CHANGE: Put photo on the right for default (row) layout */
+}
+
+.aboutphoto-frame-container {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+}
+
+.aboutphoto-frame {
+  width: 100%;
+  height: 100%;
+  border: 8px solid #a3a8957d;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutphoto-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) { /* This breakpoint can be adjusted */
+  .aboutmain-content {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+    align-items: center; /* Center them horizontally when stacked */
+    padding: 0 1rem;
+  }
+
+  .aboutcontent-wrapper {
+    width: 95%;
+    max-width: none;
+    min-width: unset; /* Reset min-width when stacked to allow full responsiveness */
+    order: unset; /* Reset order when stacked, default HTML order (text then image) */
+  }
+
+  .aboutphoto-frame-wrapper {
+    width: 90%;
+    margin-bottom: 1.5rem;
+    order: unset; /* Reset order when stacked, default HTML order */
+  }
+
+  .aboutphoto-frame-container {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .aboutcontent-text {
+    font-size: clamp(0.9rem, 2.8vw, 1.10rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutcontent-wrapper {
+    padding: 1rem;
+  }
+}
