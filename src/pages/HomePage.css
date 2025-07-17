@@ -40,6 +40,7 @@ body {
 }
 
 .spaced-header1 {
+  margin-top:3rem;
   font-family: 'YourCustomFont', serif;
   letter-spacing: 0.25em; /* Adjust as needed */
 }
@@ -56,7 +57,8 @@ body {
   align-items: center;
   justify-content: center;
   gap: 6rem;
-  margin-bottom: 8rem;
+  margin-top:3rem;
+  margin-bottom: 6rem;
 }
 
 /* === Title Header === */
@@ -90,7 +92,7 @@ body {
   text-decoration: none;
   color: black;
   font-weight: 520;
-  font-size: clamp(2.5rem, 3vw, 4rem);
+  font-size: clamp(3rem, 3vw, 4rem);
   white-space: nowrap;
   transition: color 0.3s ease;
 }
@@ -171,20 +173,6 @@ body {
   will-change: transform; /* Hint to the browser for performance */
 }
 
-/* Flutter Effect on Hover */
-.photo-frame-wrapper:hover {
-  animation: flutter 1.5s ease-in-out infinite alternate; /* Apply flutter animation */
-  transform: scale(1.01); /* Subtle slight scale on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
-}
-
-@keyframes flutter {
-  0% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-1px) rotate(0.5deg); } /* Slight up and rotate */
-  50% { transform: translateY(0) rotate(-0.5deg); } /* Back to center, opposite rotate */
-  75% { transform: translateY(-1px) rotate(0.5deg); }
-  100% { transform: translateY(0) rotate(0deg); }
-}
 
 
 /* --- Actual Photo Frame Styles --- */
@@ -237,8 +225,8 @@ body {
 /* --- Caption Styles --- */
 .content-text {
   margin-top: 4rem;
-  font-size: 2rem;
-  color: #666;
+  font-size: 2.5rem;
+  color: #7a8477;
   font-family: 'YourCustomFont4', serif; /* Use the custom font */
 }
 

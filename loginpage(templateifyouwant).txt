@@ -66,3 +66,17 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 );
 
 
+/*/* Flutter Effect on Hover */
+.photo-frame-wrapper:hover {
+  animation: flutter 1.5s ease-in-out infinite alternate; /* Apply flutter animation */
+  transform: scale(1.01); /* Subtle slight scale on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+@keyframes flutter {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-1px) rotate(0.5deg); } /* Slight up and rotate */
+  50% { transform: translateY(0) rotate(-0.5deg); } /* Back to center, opposite rotate */
+  75% { transform: translateY(-1px) rotate(0.5deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
