@@ -24,34 +24,33 @@ function resume() {
       </div>
       <div className="resume-content-wrapper">
         <p className="resume-content-text">
-          THIS IS MY RESUME
+          {/* You can add text here if desired, otherwise, this paragraph will be empty */}
         </p>
       </div>
 
       {/* NEW FLEX CONTAINER FOR TWO IMAGE BOXES */}
-      <div className="resume-downloads-container"> {/* Renamed for clarity */}
+      <div className="resume-downloads-container">
 
-        {/* RESUME DOWNLOAD BOX */}
+        {/* RESUME VIEWER BOX */}
         <div className="download-item-wrapper">
           <div className="download-photo-frame">
-            <a href="/docs/PreeceAbigailResume.pdf" download="Resume.pdf">
-              {/* Use a clear image representing a resume, or the first page of your resume PDF as a PNG/JPG */}
-              <img src="./images/resume.png" alt="Download Abigail Preece's Resume" />
+            {/* CHANGED: href points to the image file */}
+            <a href="/images/resume.png" target="_blank" rel="noopener noreferrer">
+              <img src="/images/resume.png" alt="View Abigail Preece's Resume Image" />
             </a>
-            <p className="download-label">Download Resume</p>
           </div>
+          <p className="download-label">View Resume Image</p> {/* Changed label text */}
         </div>
 
-        {/* COVER LETTER DOWNLOAD BOX */}
+        {/* COVER LETTER VIEWER BOX */}
         <div className="download-item-wrapper">
           <div className="download-photo-frame">
-            {/* Make sure you have a cover letter PDF in public/docs */}
-            <a href="/docs/Abigail-Preece-CoverLetter.pdf" download="CoverLetter.pdf">
-              {/* Use a clear image representing a cover letter, or a placeholder */}
-              <img src="./images/cover.png" alt="Download Abigail Preece's Cover Letter" />
+            {/* CHANGED: href points to the image file */}
+            <a href="/images/cover.png" target="_blank" rel="noopener noreferrer">
+              <img src="/images/cover.png" alt="View Abigail Preece's Cover Letter Image" />
             </a>
-            <p className="download-label">Download Cover Letter</p>
           </div>
+          <p className="download-label">View Cover Letter Image</p> {/* Changed label text */}
         </div>
 
       </div>

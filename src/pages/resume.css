@@ -1,0 +1,131 @@
+/* === Resume Content Text === */
+.resume-content-wrapper {
+  max-width: 800px; /* Adjust as needed */
+  margin: 2rem auto; /* Center wrapper and add space above/below */
+  text-align: center;
+}
+
+.resume-content-text {
+  font-family: 'YourCustomFont4', serif; /* Ensure this font is imported */
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  line-height: 1.6;
+  color: #555;
+}
+
+
+/* === TWO IMAGE BOXES: Resume & Cover Letter Downloads === */
+
+/* Container for the two download boxes - makes them side-by-side */
+.resume-downloads-container {
+  display: flex;
+  flex-direction: row; /* Arrange horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+  justify-content: center; /* Center the boxes horizontally if there's extra space */
+  align-items: flex-start; /* Align items to the top vertically within the container */
+  gap: 3rem; /* Space between the two boxes */
+  margin-top: 2rem;
+  max-width: 900px; /* Limit the overall width of the download section */
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem; /* Add some padding on sides */
+}
+
+/* Wrapper for each individual download item (resume or cover letter) */
+.download-item-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack image and label vertically */
+  align-items: center; /* Center items within the wrapper horizontally */
+  flex: 0 0 auto; /* Do not grow or shrink initially, width set below */
+  width: clamp(200px, 40vw, 350px); /* Responsive width for each box */
+  text-align: center; /* Center text labels */
+  margin-bottom: 1.5rem; /* Add margin for spacing when stacked */
+}
+
+.download-photo-frame {
+  width: 100%; /* Take full width of its wrapper (.download-item-wrapper) */
+  aspect-ratio: 3 / 4; /* Maintain portrait aspect ratio (width / height) */
+  border: 8px solid #a3a8957d;
+  border-radius: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure image doesn't overflow the frame */
+  display: flex; /* Helps center image inside if needed */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.8rem; /* Space between image and label */
+}
+
+/* Style for the link wrapping the image */
+.download-photo-frame a {
+  display: flex; /* Make the link also a flex container to center the image */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none; /* Remove underline from link */
+  transition: transform 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.download-photo-frame a:hover {
+    transform: scale(1.02); /* Slightly grow the image on hover */
+}
+
+
+/* Style for the images inside the frames */
+.download-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the frame, cropping if necessary */
+  display: block; /* Remove extra space below image */
+}
+
+/* Style for the text label below each download box */
+.download-label {
+  font-family: 'YourCustomFont4', serif; /* Use your desired font */
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #333; /* Darker text color */
+  margin-top: 0; /* Keep close to the image */
+  /* NO 'cursor: pointer' or 'text-decoration' here, as it's not clickable */
+}
+
+/* Media Queries for Responsiveness */
+
+@media (max-width: 768px) {
+  /* No overrides for header/nav here */
+
+  .resume-content-wrapper {
+    margin: 1.5rem auto;
+  }
+
+  .resume-content-text {
+    font-size: clamp(1rem, 2.8vw, 1.3rem);
+  }
+
+  /* Stack download boxes vertically on smaller screens */
+  .resume-downloads-container {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center items when stacked */
+    gap: 2rem; /* Reduce gap between stacked items */
+  }
+
+  .download-item-wrapper {
+    width: 80%; /* Make boxes wider when stacked */
+    max-width: 350px; /* Limit max width for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  /* No overrides for header/nav here */
+
+  .resume-content-wrapper {
+    margin: 1rem auto;
+  }
+
+  .resume-content-text {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  }
+
+  .download-item-wrapper {
+    width: 90%; /* Even wider for very small screens */
+  }
+}
