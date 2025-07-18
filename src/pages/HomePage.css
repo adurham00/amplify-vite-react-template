@@ -52,7 +52,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: clamp(1rem, 8vw, 5rem);
+    gap: clamp(4rem, 8vw, 6rem);
     list-style: none;
     padding: 0;
     margin: 0;
@@ -60,7 +60,7 @@
 
 .main-nav-list li a {
     font-family: 'YourCustomFont3', sans-serif; /* Ensure this font is imported/defined */
-    font-size: clamp(2.5rem, 3vw, 3rem);
+    font-size: clamp(2rem, 3vw, 3rem);
     white-space: nowrap;
 }
 
@@ -191,7 +191,7 @@
     }
 
     .main-nav-list {
-        gap: clamp(0.75rem, 4vw, 2rem);
+        gap: clamp(3rem, 4vw, 6rem);
     }
 
     /* Adjust the home-content-wrapper for smaller screens */

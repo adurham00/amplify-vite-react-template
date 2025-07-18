@@ -17,7 +17,7 @@ function HomePage() {
 
         <nav className="nav-wrapper">
           <ul className="main-nav-list">
-            <li><Link to="/about">about</Link></li>
+            <li><Link to="/about"> about </Link></li>
             <li><Link to="/resume">resume</Link></li>
             <li><Link to="/gallery">gallery</Link></li>
           </ul>
