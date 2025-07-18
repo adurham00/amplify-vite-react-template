@@ -95,14 +95,12 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Sketch 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                {/* <a href="/pdfs/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}> */}
-                <a
-  href="https://docs.google.com/gview?url=https://yourdomain.com/pdfs/Sketchbook.pdf&embedded=true"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  View Sketchbook (via Google)
-</a>
+                <iframe
+  src="/pdfs/Sketchbook.pdf"
+  width="100%"
+  height="600px"
+  title="Sketchbook PDF"
+/>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -115,7 +113,6 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       </p>
                     </div>
                   </div>
-                {/* </a> */}
               </div>
             </div>
           )}
