@@ -1,29 +1,23 @@
 version: 1
+# Add this new block at the top level, aligned with 'version'
+runtime-versions:
+  nodejs: 20.11.0
+
 backend:
   phases:
-    preBuild:
-        commands:
-          - nvm install 20
-          - nvm use 20
-          - node -v  # Optional: to confirm version in logs
     build:
       commands:
         - npm ci --cache .npm --prefer-offline
         - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
 frontend:
   phases:
-    preBuild:
-        commands:
-          - nvm install 20
-          - nvm use 20
-          - node -v  # Optional
     build:
       commands:
         - npm run build
   artifacts:
     baseDirectory: dist
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - .npm/**/*
