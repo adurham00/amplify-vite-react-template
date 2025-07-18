@@ -44,7 +44,7 @@ function Gallery() {
               <div className={styles.projectGrid}>
                 {/* Example Figma Project 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="https://www.figma.com/proto/be6nqhxx9VH7hQoW3hirfI/LOFI-HOME-PAGE-DESIGN?node-id=0-1&t=sKXfVXQLuZowmhzf-1" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://www.figma.com/design/be6nqhxx9VH7hQoW3hirfI/LOFI-HOME-PAGE-DESIGN?node-id=0-1&m=dev&t=cqzxwVf6VD5m2v95-1" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -61,7 +61,7 @@ function Gallery() {
 
                 {/* Example Figma Project 2 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="YOUR_FIGMA_PROJECT_2_LINK" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://www.figma.com/design/hlxXUb4eF3GhTK0Ph0mQbV/Group-7-SUVAS?node-id=0-1&m=dev&t=Jf8VfvAHbHI0ENsf-1" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -75,7 +75,7 @@ This collaborative CS 256 group project focused on transforming the existing Sou
 
 A key challenge was harmonizing diverse design aesthetics and individual perspectives from team members into one cohesive application. We overcame this through constant communication and an iterative design process. Additionally, we integrated new, user-centric features not present on their original site.
 
-The accompanying video showcases my direct contributions to the app's UI/UX elements, though I actively contributed ideas and feedback across all project phases. This group experience was a significant inspiration for my subsequent personal redesign of the shelter's website.
+The accompanying link showcases my direct contributions to the app's UI/UX elements (all labeled with names), though I actively contributed ideas and feedback across all project phases. This group experience was a significant inspiration for my subsequent personal redesign of the shelter's website.
                       </p>
                     </div>
                   </div>
@@ -95,7 +95,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Sketch 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/pdfs/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://byu.box.com/s/drv5ktoq3hfg77a7c5qg0nmncw5oxkyg" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -179,7 +179,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       <img src="/images/Grandma.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Old Lady </h3>
+                      <h3>Old Lady Bug</h3>
                       <p>
                        This 3D model project allowed me to explore using VFX for dynamic textures like the rug and fire. My goal was to achieve a playful, sketchy tone, pushing my skills in visual effects. While still an area for growth, I'm excited to continue developing in this space.
                       </p>
@@ -219,7 +219,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
 
                 {/* Example Lo-Fi Design 2 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/pdfs/Stickers2.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://byu.box.com/s/vmu14c9dlvnwmxa4dllcp9ukl43vc2c5" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
