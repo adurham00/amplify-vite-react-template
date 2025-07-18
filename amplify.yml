@@ -1,19 +1,32 @@
 version: 1
 backend:
   phases:
+    preBuild:
+      commands:
+        - npm install -g @aws-amplify/cli
+        - nvm install 20.11.0
+        - nvm use 20.11.0
+        - node -v
     build:
       commands:
-        - npm ci --cache .npm --prefer-offline
-        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID
+        - npm install  # 👈 Use this instead of `npm ci`
+        - echo "Starting pipeline-deploy..."
+        - npx ampx pipeline-deploy --branch $AWS_BRANCH --app-id $AWS_APP_ID || { echo 'pipeline-deploy failed'; exit 1; }
+        - echo "pipeline-deploy completed"
 frontend:
   phases:
+    preBuild:
+      commands:
+        - nvm install 20.11.0
+        - nvm use 20.11.0
+        - node -v
     build:
       commands:
         - npm run build
   artifacts:
     baseDirectory: dist
     files:
-      - "**/*"
+      - '**/*'
   cache:
     paths:
       - .npm/**/*
