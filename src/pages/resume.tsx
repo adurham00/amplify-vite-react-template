@@ -22,39 +22,40 @@ function resume() {
         </nav>
 
       </div>
+      {/* THIS IS THE MAIN CONTENT WRAPPER FOR THE RESUME PAGE */}
       <div className="resume-content-wrapper">
-        <p className="resume-content-text">
-          {/* You can add text here if desired, otherwise, this paragraph will be empty */}
-        </p>
-      </div>
+        {/* If you want introductory text above the images, uncomment and add it here: */}
+        {/* <p className="resume-content-text">
+          This is some introductory text for my resume page.
+        </p> */}
 
-      {/* NEW FLEX CONTAINER FOR TWO IMAGE BOXES */}
-      <div className="resume-downloads-container">
+        {/* NEW FLEX CONTAINER FOR TWO IMAGE BOXES - MOVED INSIDE resume-content-wrapper */}
+        <div className="resume-downloads-container">
 
-        {/* RESUME VIEWER BOX */}
-        <div className="download-item-wrapper">
-          <div className="download-photo-frame">
-            {/* CHANGED: href points to the image file */}
-            <a href="/images/resume.png" target="_blank" rel="noopener noreferrer">
-              <img src="/images/resume.png" alt="View Abigail Preece's Resume Image" />
-            </a>
+          {/* RESUME VIEWER BOX */}
+          <div className="download-item-wrapper">
+            <div className="download-photo-frame">
+              <a href="/images/resume.png" target="_blank" rel="noopener noreferrer">
+                <img src="/images/resume.png" alt="View Abigail Preece's Resume Image" />
+              </a>
+            </div>
+            <p className="download-label">View Resume Image</p>
           </div>
-          <p className="download-label">View Resume Image</p> {/* Changed label text */}
-        </div>
 
-        {/* COVER LETTER VIEWER BOX */}
-        <div className="download-item-wrapper">
-          <div className="download-photo-frame">
-            {/* CHANGED: href points to the image file */}
-            <a href="/images/cover.png" target="_blank" rel="noopener noreferrer">
-              <img src="/images/cover.png" alt="View Abigail Preece's Cover Letter Image" />
-            </a>
+          {/* COVER LETTER VIEWER BOX */}
+          <div className="download-item-wrapper">
+            <div className="download-photo-frame">
+              <a href="/images/cover.png" target="_blank" rel="noopener noreferrer">
+                <img src="/images/cover.png" alt="View Abigail Preece's Cover Letter Image" />
+              </a>
+            </div>
+            <p className="download-label">View Cover Letter Image</p>
           </div>
-          <p className="download-label">View Cover Letter Image</p> {/* Changed label text */}
-        </div>
 
-      </div>
-      {/* END NEW FLEX CONTAINER */}
+        </div>
+        {/* END NEW FLEX CONTAINER */}
+
+      </div> {/* END resume-content-wrapper */}
 
     </div>
   );

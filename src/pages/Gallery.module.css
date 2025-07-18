@@ -1,0 +1,190 @@
+/* --- Gallery Main Content Wrapper --- */
+/* This is the main container for your gallery content, inside the shared layout. */
+.galleryMainContent {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 30px auto; /* More margin */
+    background-color: #FFF;
+    border-radius: 20px; /* More rounded, bubbly feel */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
+    font-family: 'Poppins', sans-serif; /* A more friendly font */
+    color: #4A4A4A; /* Darker grey for primary text */
+}
+
+.galleryIntroText {
+    font-size: 1.2em;
+    color: #666;
+    text-align: center;
+    margin-bottom: 40px; /* More space */
+    line-height: 1.6;
+}
+
+/* --- Bubbly Accordion Styles --- */
+.accordionSection {
+    margin-bottom: 25px; /* More space between sections */
+    border: none; /* Remove default border */
+    border-radius: 15px; /* Bubbly rounded corners */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+}
+
+.accordionHeader {
+    background-color: #FFEBEE; /* Light pink background for headers */
+    padding: 18px 25px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em; /* Slightly larger */
+    font-weight: 700;
+    color: #D8436E; /* Deep pink text */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 15px; /* Match section border-radius */
+}
+
+.accordionHeader:hover {
+    background-color: #FFDDE2; /* Lighter pink on hover */
+    color: #B02C5A; /* Slightly darker pink */
+    transform: translateY(-3px); /* Subtle lift effect */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+}
+
+.accordionHeader:active {
+    transform: translateY(0); /* Press down effect */
+}
+
+/* The arrow for the accordion. Your JS manages its content (▲ / ▼). */
+.accordionHeader::after {
+    font-size: 0.8em;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.accordionContent {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 15px; /* Match section border-radius */
+    border-bottom-right-radius: 15px;
+}
+
+/* Project Grid within Accordion Content */
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width for larger items */
+    gap: 30px; /* More space between project items */
+    padding-top: 10px;
+}
+
+/* --- Project Item and Description Framing --- */
+.downloadItemWrapper {
+    background-color: #fcfcfc; /* Very light background for each item */
+    border: 1px solid #FFEDF0; /* Soft pink border */
+    border-radius: 12px; /* Nicely rounded corners */
+    padding: 20px; /* More padding inside */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Soft, subtle shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none; /* Removes underline from the link itself */
+    color: inherit; /* Ensures color inheritance */
+}
+
+.downloadItemWrapper:hover {
+    transform: translateY(-8px); /* More pronounced lift on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Deeper shadow on hover */
+}
+
+.projectDetails {
+    display: flex;
+    flex-direction: row; /* Image and description side-by-side */
+    align-items: flex-start; /* Align tops of image and description */
+    gap: 20px; /* More space between image and text */
+    width: 100%;
+    margin-bottom: 20px; /* Space between details and the "View Project" label */
+    flex-wrap: wrap; /* Allow items to wrap to next line on smaller screens */
+    justify-content: center; /* Center items when they wrap */
+}
+
+.downloadPhotoFrame {
+    flex-shrink: 0; /* Don't allow it to shrink */
+    width: 45%; /* Adjust as needed - percentage of the .projectDetails width */
+    max-width: 200px; /* Maximum width for the image frame */
+    padding: 5px; /* Padding inside the image frame for a border-like effect */
+    border: 2px solid #FFC0CB; /* A cute pink border for the image */
+    border-radius: 10px; /* Rounded corners for the image frame */
+    position: relative;
+    overflow: hidden;
+    padding-top: 45%; /* Maintain aspect ratio (e.g., 1:1) */
+}
+
+.downloadPhotoFrame img {
+    position: absolute;
+    top: 5px; /* Offset for internal padding */
+    left: 5px; /* Offset for internal padding */
+    width: calc(100% - 10px); /* Adjust width for padding */
+    height: calc(100% - 10px); /* Adjust height for padding */
+    object-fit: cover;
+    border-radius: 8px; /* Slightly less rounded than outer frame */
+}
+
+
+.projectDescription {
+    flex-grow: 1; /* Allow it to take up remaining space */
+    text-align: left; /* Align text within description to the left */
+    font-size: 1em; /* Slightly larger font */
+    color: #555;
+    line-height: 1.6;
+    padding: 15px; /* Padding inside the description box */
+    border: 1px dashed #FFDDE2; /* A cute dashed border for the description */
+    border-radius: 10px; /* Rounded corners for the description box */
+    background-color: #FFF9FA; /* Very light pink background for description */
+    max-width: 100%; /* Ensure it doesn't overflow */
+}
+
+.projectDescription h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #D8436E; /* Match accordion header color */
+    font-size: 1.2em; /* Slightly larger title */
+    font-weight: 600;
+    text-decoration: none; /* ADDED: Explicitly remove underline for h3 */
+}
+
+.projectDescription p {
+    margin-bottom: 0;
+    text-decoration: none; /* ADDED: Explicitly remove underline for p */
+}
+
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 768px) {
+    .galleryMainContent {
+        padding: 30px;
+        margin: 20px auto;
+    }
+
+    .projectGrid {
+        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+    }
+
+    .projectDetails {
+        flex-direction: column; /* Stack image and description vertically */
+        align-items: center; /* Center them when stacked */
+        gap: 15px; /* Reduce gap when stacked */
+    }
+
+    .downloadPhotoFrame {
+        width: 80%; /* Make image larger when stacked */
+        max-width: 300px; /* Adjust max width as desired */
+        padding-top: 60%; /* Adjust aspect ratio when stacked (e.g., 4:3) */
+    }
+
+    .downloadPhotoFrame img {
+        top: 5px;
+        left: 5px;
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+    }
+}
