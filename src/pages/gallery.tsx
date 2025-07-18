@@ -95,7 +95,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Sketch 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="/pdfs/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -147,6 +147,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
                       <img src="/images/Fairy.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
+                    
                     <div className={styles.projectDescription}>
                       <h3>Custom Mini-Figure</h3>
                       <p>
@@ -201,7 +202,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Lo-Fi Design 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/Lofi Sketch.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="/pdfs/Lofi Sketch.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -218,7 +219,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
 
                 {/* Example Lo-Fi Design 2 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/Stickers2.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="/pdfs/Stickers2.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
