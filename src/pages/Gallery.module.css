@@ -35,7 +35,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.4em; /* Slightly larger */
+    font-size: 2rem; /* Slightly larger */
+    font-family: 'YourCustomFont4', serif; /* Custom font for headers */
     font-weight: 700;
     color: #D8436E; /* Deep pink text */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;

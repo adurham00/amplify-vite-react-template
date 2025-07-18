@@ -53,7 +53,7 @@ function Gallery() {
                     <div className={styles.projectDescription}>
                       <h3>South Utah Valley Website Prototype</h3>
                       <p>
-                        This project is a high-fidelity prototype for a tourism website, focusing on interactive elements and user experience design. It showcases various attractions and activities in the South Utah Valley area, designed with a clean and modern aesthetic.
+                        This project details a proactive redesign of the South Valley Animal Shelter's existing website, which was in significant need of a user experience overhaul. Inspired by a prior group project in my CS 256 class and driven by a personal passion for animal welfare, I developed this medium-fidelity Figma mockup to offer an improved, intuitive platform for potential adopters, volunteers, and donors. The central challenge was transforming their outdated interface into an intuitive and engaging platform that effectively served their diverse audience. As a self-initiated project, this involved proactively identifying key user experience pain points and simplifying complex information. While not all aspects of the prototype are fully functional, as we are still in the core design phase, this initiative has successfully led to a scheduled meeting with the shelter to begin development on their new live site.
                       </p>
                     </div>
                   </div>
@@ -70,7 +70,12 @@ function Gallery() {
                     <div className={styles.projectDescription}>
                       <h3>CS 256 Group Project</h3>
                       <p>
-                        A brief description of your second Figma project. What was its purpose? What tools or techniques did you use? What problem did it solve?
+
+This collaborative CS 256 group project focused on transforming the existing South Utah Valley Animal Shelter (SUVAS) website into a user-friendly mobile app design. My prior volunteer experience highlighted the need for a more intuitive digital presence for the shelter.
+
+A key challenge was harmonizing diverse design aesthetics and individual perspectives from team members into one cohesive application. We overcame this through constant communication and an iterative design process. Additionally, we integrated new, user-centric features not present on their original site.
+
+The accompanying video showcases my direct contributions to the app's UI/UX elements, though I actively contributed ideas and feedback across all project phases. This group experience was a significant inspiration for my subsequent personal redesign of the shelter's website.
                       </p>
                     </div>
                   </div>
@@ -99,7 +104,7 @@ function Gallery() {
                     <div className={styles.projectDescription}>
                       <h3>Sketchbook Samples</h3>
                       <p>
-                        A series of quick sketches exploring natural landscapes, focusing on capturing light and shadow. These pieces demonstrate observational drawing skills and composition.
+                       This collection showcases various sketches, highlighting my foundational drawing abilities and a genuine desire to cultivate design skills outside of computer science. While consistently balancing academic and other commitments, I often find it challenging to dedicate extensive time to drawing. Despite this constraint, I actively pursue opportunities to practice, and each piece represents a step in my ongoing artistic journey, demonstrating gradual but steady improvement.
                       </p>
                     </div>
                   </div>
@@ -126,9 +131,9 @@ function Gallery() {
                       <img src="/images/Cafe.jpg" alt="3D Chair Model Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Chair 3D Model</h3>
+                      <h3>The Villa</h3>
                       <p>
-                        A detailed 3D model of a modern chair, created using [Software Name, e.g., Blender/Maya/SketchUp]. This project demonstrates proficiency in 3D modeling and rendering.
+                       This 3D project features an Italian-style cafe and city corner model. Its creation demanded painstaking attention to detail, with individual railings for each building meticulously handcrafted. All textures were custom, drawn by hand or painted in Adobe Substance Painter, and then converted into bitmaps. This project demonstrates precision in 3D modeling and specialized hand-drawn texturing techniques.
                       </p>
                     </div>
                   </div>
@@ -143,9 +148,9 @@ function Gallery() {
                       <img src="/images/Fairy.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Building Visualization</h3>
+                      <h3>Custom Mini-Figure</h3>
                       <p>
-                        An architectural visualization project showcasing a contemporary building design. Rendered to illustrate light, materials, and spatial relationships.
+                       This project showcases a custom 3D model of a LEGO figure and its corresponding background. I modeled and assembled individual LEGO components digitally, replicating their authentic construction. A primary challenge involved accurately maintaining proportions and achieving the material's signature glossy finish.
                       </p>
                     </div>
                   </div>
@@ -158,9 +163,9 @@ function Gallery() {
                       <img src="/images/Spider.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Building Visualization</h3>
+                      <h3>Love Bug</h3>
                       <p>
-                        An architectural visualization project showcasing a contemporary building design. Rendered to illustrate light, materials, and spatial relationships.
+                      This project presents my most distinct visual design, directly inspired by the Jonas Brothers' song 'Lovebug.' Tasked with creating a unique bug-centric scene, I conceptualized a creature that combines the anatomical design of a heart with the form of a spider. While embracing a more gruesome aesthetic, the piece retains a playful sensibility. A significant challenge involved applying textures to the ZBrush-sculpted body, a new workflow I attempted for this specific project.
                       </p>
                     </div>
                   </div>
