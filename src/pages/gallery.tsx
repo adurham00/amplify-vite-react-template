@@ -181,7 +181,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                     <div className={styles.projectDescription}>
                       <h3>Old Lady </h3>
                       <p>
-                        An architectural visualization project showcasing a contemporary building design. Rendered to illustrate light, materials, and spatial relationships.
+                       This 3D model project allowed me to explore using VFX for dynamic textures like the rug and fire. My goal was to achieve a playful, sketchy tone, pushing my skills in visual effects. While still an area for growth, I'm excited to continue developing in this space.
                       </p>
                     </div>
                   </div>
@@ -211,7 +211,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                     <div className={styles.projectDescription}>
                       <h3>Low Fidelity Sketches</h3>
                       <p>
-                        Initial low-fidelity sketches outlining the user flow for a mobile application. Focused on key screens and interactions before moving to higher fidelity.
+                       My class projects really helped me get better at showing ideas fast using quick, simple sketches. I practiced coming up with a lot of different concepts quickly, focusing on the main idea rather than perfect drawings. I also learned to map out how people would use things, showing step-by-step interactions with basic sketches to make sure the process was clear. It taught me how to quickly turn my thoughts into visuals.
                       </p>
                     </div>
                   </div>
@@ -226,9 +226,9 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       <img src="/images/cat.png" alt="Website Wireframe Sketch Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Website Wireframe</h3>
+                      <h3>BYU Physics Department</h3>
                       <p>
-                        Hand-drawn wireframes for a responsive website, illustrating layout ideas, content placement, and navigational structure.
+                        For the Physics Department, I designed a series of engaging stickers for each major, linking directly to their respective information pages, and also developed custom, student-voted designs. This project allowed me to merge creativity with practical application, successfully navigating the challenge of creating designs appealing to both a student audience and non-creative professionals.
                       </p>
                     </div>
                   </div>
