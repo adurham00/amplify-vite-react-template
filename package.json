@@ -14,11 +14,17 @@
     "aws-amplify": "^6.6.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-pdf": "^10.0.1",
     "react-router-dom": "^7.6.3"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.5.0",
     "@aws-amplify/backend-cli": "^1.2.9",
+    "@types/babel__core": "^7.20.5",
+    "@types/babel__generator": "^7.27.0",
+    "@types/babel__template": "^7.4.4",
+    "@types/babel__traverse": "^7.20.7",
+    "@types/estree": "^1.0.8",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@typescript-eslint/eslint-plugin": "^7.2.0",

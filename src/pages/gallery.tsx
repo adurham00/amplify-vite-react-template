@@ -95,7 +95,14 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Sketch 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/pdfs/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                {/* <a href="/pdfs/Sketchbook.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}> */}
+                <a
+  href="https://docs.google.com/gview?url=https://yourdomain.com/pdfs/Sketchbook.pdf&embedded=true"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View Sketchbook (via Google)
+</a>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -108,7 +115,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       </p>
                     </div>
                   </div>
-                </a>
+                {/* </a> */}
               </div>
             </div>
           )}
@@ -179,7 +186,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       <img src="/images/Grandma.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Old Lady Bug</h3>
+                      <h3>Old Lady </h3>
                       <p>
                         An architectural visualization project showcasing a contemporary building design. Rendered to illustrate light, materials, and spatial relationships.
                       </p>
