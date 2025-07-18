@@ -179,7 +179,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
                       <img src="/images/Grandma.jpg" alt="Architectural 3D Visualization Thumbnail" />
                     </div>
                     <div className={styles.projectDescription}>
-                      <h3>Building Visualization</h3>
+                      <h3>Old Lady Bug</h3>
                       <p>
                         An architectural visualization project showcasing a contemporary building design. Rendered to illustrate light, materials, and spatial relationships.
                       </p>
@@ -219,7 +219,9 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
 
                 {/* Example Lo-Fi Design 2 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/pdfs/Stickers2.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                  <iframe src="/pdfs/Stickers2.pdf" width="100%" height="600px" style="border: none;" title="Stickers PDF Viewer">
+                    <p>Your browser does not support iframes. You can <a href="/pdfs/Stickers2.pdf" target="_blank" rel="noopener noreferrer">download the PDF directly</a>.</p>
+                  </iframe>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
