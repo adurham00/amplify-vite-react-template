@@ -3,8 +3,8 @@ backend:
   phases:
     preBuild:
         commands:
-          - nvm install 20.11.1
-          - nvm use 20.11.1
+          - nvm install 20
+          - nvm use 20
           - node -v  # Optional: to confirm version in logs
     build:
       commands:
@@ -14,8 +14,8 @@ frontend:
   phases:
     preBuild:
         commands:
-          - nvm install 20.11.1
-          - nvm use 20.11.1
+          - nvm install 20
+          - nvm use 20
           - node -v  # Optional
     build:
       commands:
