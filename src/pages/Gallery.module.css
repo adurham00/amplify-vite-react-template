@@ -12,7 +12,7 @@
 }
 
 .galleryIntroText {
-    font-size: 1.2em;
+    font-size: 1.2em; /* This is fine, or you could use clamp here too */
     color: #666;
     text-align: center;
     margin-bottom: 40px; /* More space */
@@ -134,7 +134,7 @@
 .projectDescription {
     flex-grow: 1; /* Allow it to take up remaining space */
     text-align: left; /* Align text within description to the left */
-    font-size: 1em; /* Slightly larger font */
+    /* REMOVED: font-size: 1em; as it will be handled by the p tag's clamp */
     color: #555;
     line-height: 1.6;
     padding: 15px; /* Padding inside the description box */
@@ -148,14 +148,19 @@
     margin-top: 0;
     margin-bottom: 10px;
     color: #D8436E; /* Match accordion header color */
-    font-size: 1.2em; /* Slightly larger title */
+    font-size: 1.2em; /* This size is fine, or you could clamp it if needed */
     font-weight: 600;
-    text-decoration: none; /* ADDED: Explicitly remove underline for h3 */
+    text-decoration: none; /* Explicitly remove underline for h3 */
 }
 
+/* NEW: Reactive font-size for the paragraph text inside projectDescription */
 .projectDescription p {
     margin-bottom: 0;
-    text-decoration: none; /* ADDED: Explicitly remove underline for p */
+    text-decoration: none; /* Explicitly remove underline for p */
+    /* Use clamp for responsive font size */
+    /* Adjust min, preferred (vw), and max values as needed for your design */
+    font-size: clamp(0.9rem, 1.8vw, 1.1em); /* Example: Min 0.9rem, Preferred 1.8vw, Max 1.1em */
+    line-height: 1.6; /* Keep good line height for readability */
 }
 
 
@@ -164,6 +169,16 @@
     .galleryMainContent {
         padding: 30px;
         margin: 20px auto;
+    }
+
+    /* Adjust the accordion header font size for smaller screens */
+    .accordionHeader {
+        font-size: clamp(1.5rem, 4vw, 2rem); /* Make header text reactive too */
+        padding: 15px 20px; /* Slightly less padding */
+    }
+
+    .galleryIntroText {
+        font-size: clamp(1em, 3vw, 1.2em); /* Make intro text reactive */
     }
 
     .projectGrid {
@@ -187,5 +202,35 @@
         left: 5px;
         width: calc(100% - 10px);
         height: calc(100% - 10px);
+    }
+
+    .projectDescription {
+        padding: 12px; /* Slightly less padding inside description box on mobile */
+    }
+    /* The .projectDescription p clamp() rule will handle its own responsiveness */
+}
+
+/* Optional: Additional media query for very small screens */
+@media (max-width: 480px) {
+    .galleryMainContent {
+        padding: 20px;
+        margin: 15px auto;
+    }
+
+    .accordionHeader {
+        font-size: clamp(1.2rem, 5vw, 1.5rem); /* Even smaller headers */
+        padding: 12px 15px;
+    }
+
+    .galleryIntroText {
+        font-size: clamp(0.9em, 4vw, 1em);
+    }
+
+    .downloadPhotoFrame {
+        width: 90%; /* Even larger image on very small screens */
+    }
+
+    .projectDescription {
+        padding: 10px; /* Minimal padding for description */
     }
 }

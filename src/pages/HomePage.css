@@ -28,17 +28,17 @@
     font-size: clamp(2.5rem, 3vw, 4rem);
     line-height: 1;
     margin: 0;
-    font-family: 'YourCustomFont', serif;
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
 }
 
 /* Specific styling for 'ABIGAIL' and 'DURHAM' if needed */
 .spaced-header1 {
-    font-family: 'YourCustomFont', serif;
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
     letter-spacing: 0.25em;
 }
 
 .spaced-header2 {
-    font-family: 'YourCustomFont', serif;
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
     letter-spacing: 0.35em;
     padding-bottom: 0.5rem;
 }
@@ -59,7 +59,7 @@
 }
 
 .main-nav-list li a {
-    font-family: 'YourCustomFont3', sans-serif;
+    font-family: 'YourCustomFont3', sans-serif; /* Ensure this font is imported/defined */
     font-size: clamp(2.5rem, 3vw, 3rem);
     white-space: nowrap;
 }
@@ -71,8 +71,8 @@
 
 /* NEW: Wrapper for the home page descriptive text, with box styles */
 .home-content-wrapper {
-    max-width: 800px; /* Limits the width of the text box for readability */
-    min-width: 650px;
+    max-width: 800px; /* Limits the width of the text box for readability on large screens */
+    /* REMOVED: min-width: 650px; to allow shrinking on small screens */
     width: 90%; /* Responsive width: takes 90% of parent's width */
     margin: 0 auto; /* Centers the box */
     padding: 1.5rem; /* Padding around the text inside the box */
@@ -81,27 +81,25 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     box-sizing: border-box; /* Include padding/border in width */
 
-    /* Inherit margin-top/bottom from the original .content-text if you still need it */
     margin-top: 2rem;
     margin-bottom: 2.5rem;
 }
 
 /* Descriptive Text / Caption Styles (now styled *within* the new wrapper) */
 .content-text {
-    /* Remove previous margin-top/bottom as they are now on the wrapper */
     margin: 0; /* Remove default paragraph margins to avoid double padding */
     padding-top: 0.5rem; /* Padding inside the text box */
     padding-bottom: 0.5rem;
-    font-size: clamp(1.75rem, 3vw, 2rem);
+    /* Updated: Use clamp for font-size to make it fully responsive */
+    font-size: clamp(1.1rem, 2.5vw, 2rem); /* Min 1.1rem, Preferred 2.5vw, Max 2rem */
     color: rgb(0, 63, 2);
-    font-family: 'YourCustomFont4', serif;
+    font-family: 'YourCustomFont4', serif; /* Ensure this font is imported/defined */
     text-align: center; /* Center the text inside the box if desired */
 }
 
 
 /* Photo Frame Container (Overall Positioning and Centering) */
 .photo-frame-container {
-    /* Keep existing styles */
     margin-top: 2rem;
     margin-bottom: 2rem;
     display: flex;
@@ -165,7 +163,7 @@
     background-color: lightgray;
     box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
-    padding-bottom: 75%;
+    padding-bottom: 75%; /* Maintain aspect ratio if content is dynamic */
 }
 
 .text-box-left,
@@ -183,7 +181,7 @@
         width: 90%;
         height: auto;
         max-width: 450px;
-        aspect-ratio: 450 / 350;
+        aspect-ratio: 450 / 350; /* Maintain original aspect ratio */
         border-width: 6px;
     }
 
@@ -202,13 +200,10 @@
         width: 95%; /* Make it take more width on small screens */
     }
 
-    /* Removed .content-text responsiveness as it's now handled by clamp on the wrapper */
-    /* .content-text {
-        font-size: clamp(1.2rem, 4vw, 1.8rem);
-    } */
+    /* REMOVED: .content-text font-size override here as clamp() handles it globally */
 
     .portfolio-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack elements vertically */
         gap: 2rem;
     }
 
@@ -216,6 +211,14 @@
     .image-box-right,
     .text-box-left,
     .text-box-right {
-        width: 100%;
+        width: 100%; /* Make them full width */
+    }
+}
+
+/* Optional: Additional media query for very small screens */
+@media (max-width: 480px) {
+    .home-content-wrapper {
+        padding: 0.75rem; /* Even smaller padding for tiny screens */
+        width: 98%; /* Take almost full width */
     }
 }
