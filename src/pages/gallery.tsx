@@ -202,7 +202,7 @@ The accompanying video showcases my direct contributions to the app's UI/UX elem
               <div className={styles.projectGrid}>
                 {/* Example Lo-Fi Design 1 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="/pdfs/Lofi Sketch.pdf" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://byu.box.com/s/5vwj213wws7rhg633a192llc9dh8txdg" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
