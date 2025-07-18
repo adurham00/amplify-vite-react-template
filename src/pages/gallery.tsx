@@ -233,6 +233,22 @@ The accompanying link showcases my direct contributions to the app's UI/UX eleme
                     </div>
                   </div>
                 </a>
+
+                 <a href="https://byu.box.com/s/kll2ifsbglpo356ckw1x6m3g8lwea3rn" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                  <div className={styles.projectDetails}>
+                    <div className={styles.downloadPhotoFrame}>
+                      {/* Removed the <a> tag here - the outer <a> now covers the image */}
+                      <img src="/images/UML.png" alt="Website Wireframe Sketch Thumbnail" />
+                    </div>
+                    <div className={styles.projectDescription}>
+                      <h3>Lucid Chart</h3>
+                      <p>
+                        This project involved creating a Lucid Chart wireframe for a website, focusing on user experience and intuitive navigation. The challenge was to design a clear, logical flow that would guide users seamlessly through the site, ensuring that all essential information was easily accessible. There is also a UML diagram included, which was a new experience for me. I had to learn how to use Lucid Chart effectively, which was a bit of a challenge at first, but it helped me understand how to visually represent complex systems and processes.
+                      </p>
+                    </div>
+                  </div>
+                </a>
+
               </div>
             </div>
           )}

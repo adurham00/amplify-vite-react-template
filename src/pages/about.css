@@ -20,6 +20,7 @@
 }
 
 .aboutcontent-wrapper {
+  text-align: center;
   max-width: 600px; /* Max width for the text content on large screens */
   flex: 1 1 50%; /* Allows shrinking, growing, and a preferred width (starts at 50%) */
   min-width: 400px; /* <--- KEY CHANGE: Increased min-width to prevent it from getting too small. Adjust as needed. */

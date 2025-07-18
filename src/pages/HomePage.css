@@ -80,7 +80,7 @@
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     box-sizing: border-box; /* Include padding/border in width */
-
+    text-align: center;
     margin-top: 2rem;
     margin-bottom: 2.5rem;
 }
