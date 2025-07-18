@@ -178,7 +178,8 @@
     }
 
     .galleryIntroText {
-        font-size: clamp(1em, 3vw, 1.2em); /* Make intro text reactive */
+        font-family:yourCustomFont4, serif; /* Use your desired font */
+        font-size: clamp(1.25em, 3vw, 2em); /* Make intro text reactive */
     }
 
     .projectGrid {

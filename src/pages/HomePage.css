@@ -92,7 +92,7 @@
     padding-bottom: 0.5rem;
     /* Updated: Use clamp for font-size to make it fully responsive */
     font-size: clamp(1.1rem, 2.5vw, 2rem); /* Min 1.1rem, Preferred 2.5vw, Max 2rem */
-    color: rgb(0, 63, 2);
+    color: rgb(0, 0, 0);
     font-family: 'YourCustomFont4', serif; /* Ensure this font is imported/defined */
     text-align: center; /* Center the text inside the box if desired */
 }
