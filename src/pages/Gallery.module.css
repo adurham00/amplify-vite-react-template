@@ -1,57 +1,253 @@
+
+
+body {
+    font-family: 'Poppins', sans-serif; /* A good default for overall text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+}
+
+
+/* === Home Page Container === */
+.HomePage-container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 1.25rem;
+    box-sizing: border-box;
+}
+
+/* --- */
+
+/* === Header & Navigation (Home Page Specific) === */
+.header-nav-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 0.4rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Title Header (Your Name) */
+.TitleHeader {
+    text-align: center;
+}
+
+.TitleHeader h1 {
+    font-size: clamp(2.5rem, 3vw, 4rem);
+    line-height: 1;
+    margin: 0;
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
+}
+
+/* Specific styling for 'ABIGAIL' and 'DURHAM' if needed */
+.spaced-header1 {
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
+    letter-spacing: 0.25em;
+}
+
+.spaced-header2 {
+    font-family: 'YourCustomFont', serif; /* Ensure this font is imported/defined */
+    letter-spacing: 0.35em;
+    padding-bottom: 0.5rem;
+}
+
+/* Navigation Container (specific layout for this homepage nav) */
+.nav-wrapper {
+    width: 100%;
+}
+
+.main-nav-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap horizontally onto new lines */
+    
+    /* Corrected: Added opening clamp(. This will apply globally above 768px.
+       Adjust min, preferred (vw), and max values as needed.
+       Using 'rem' for consistency and predictability based on root font-size. */
+    gap: clamp(3rem, 8vw, 5rem);
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav-list li a {
+    font-family: 'YourCustomFont3', sans-serif; /* Ensure this font is imported/defined */
+    font-size: clamp(2rem, 3vw, 3rem);
+    white-space: nowrap; /* Prevents navigation links from breaking onto multiple lines */
+    text-decoration: none; /* Ensure links are not underlined */
+    color: inherit; /* Inherit color from parent or define explicitly */
+}
+
+
+/* --- */
+
+/* === Main Content Sections (Home Page Specific) === */
+
+/* NEW: Wrapper for the home page descriptive text, with box styles */
+.home-content-wrapper {
+    max-width: 800px; /* Limits the width of the text box for readability on large screens */
+    width: 90%; /* Responsive width: takes 90% of parent's width */
+    margin: 0 auto; /* Centers the box */
+    padding: 1.5rem; /* Padding around the text inside the box */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    box-sizing: border-box; /* Include padding/border in width */
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* Descriptive Text / Caption Styles (now styled *within* the new wrapper) */
+.content-text {
+    margin: 0; /* Remove default paragraph margins to avoid double padding */
+    padding-top: 0.5rem; /* Padding inside the text box */
+    padding-bottom: 0.5rem;
+    /* Updated: Use clamp for font-size to make it fully responsive */
+    font-size: clamp(1.1rem, 2.5vw, 2rem); /* Min 1.1rem, Preferred 2.5vw, Max 2rem */
+    color: rgb(0, 0, 0);
+    font-family: 'YourCustomFont4', serif; /* Ensure this font is imported/defined */
+    text-align: center; /* Center the text inside the box if desired */
+}
+
+
+/* Photo Frame Container (Overall Positioning and Centering) */
+.photo-frame-container {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Photo Frame Wrapper (for flutter and tape/pin positioning) */
+.photo-frame-wrapper {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transform-origin: center center;
+    will-change: transform;
+}
+
+/* Actual Photo Frame Styles */
+.photo-frame {
+    width: 450px;
+    height: 350px;
+    border: 8px solid #a3a8957d;
+    border-radius: 2px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.framed-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* --- */
+/* === Portfolio Section Layout (if used later in the scroll on homepage) === */
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    gap: 9rem;
+}
+
+.portfolio-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8rem;
+}
+
+.portfolio-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-box-left,
+.image-box-right {
+    width: 50%;
+    height: auto;
+    background-color: lightgray;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    padding-bottom: 75%; /* Maintain aspect ratio if content is dynamic */
+}
+
+.text-box-left,
+.text-box-right {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* --- */
+
 /* --- Gallery Main Content Wrapper --- */
-/* This is the main container for your gallery content, inside the shared layout. */
 .galleryMainContent {
     padding: 40px;
     max-width: 1200px;
-    margin: 30px auto; /* More margin */
+    margin: 30px auto;
     background-color: #FFF;
-    border-radius: 20px; /* More rounded, bubbly feel */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Stronger, softer shadow */
-    font-family: 'Poppins', sans-serif; /* A more friendly font */
-    color: #4A4A4A; /* Darker grey for primary text */
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'Poppins', sans-serif;
+    color: #4A4A4A;
 }
 
 .galleryIntroText {
-    font-size: 1.2em; /* This is fine, or you could use clamp here too */
+    /* Corrected: Applying clamp globally to galleryIntroText for consistent scaling.
+       Adjust these min/preferred/max values to control how large it gets. */
+    font-size: clamp(1.1rem, 2vw, 1.8rem); /* Example: Min 1.1rem, Fluid 2vw, Max 1.8rem */
     color: #666;
     text-align: center;
-    margin-bottom: 40px; /* More space */
+    margin-bottom: 40px;
     line-height: 1.6;
+    font-family: 'YourCustomFont4', serif; /* Apply custom font globally */
 }
 
 /* --- Bubbly Accordion Styles --- */
 .accordionSection {
-    margin-bottom: 25px; /* More space between sections */
-    border: none; /* Remove default border */
-    border-radius: 15px; /* Bubbly rounded corners */
+    margin-bottom: 25px;
+    border: none;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .accordionHeader {
-    background-color: #FFEBEE; /* Light pink background for headers */
+    background-color: #FFEBEE;
     padding: 18px 25px;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2rem; /* Slightly larger */
-    font-family: 'YourCustomFont4', serif; /* Custom font for headers */
+    font-size: 2rem;
+    font-family: 'YourCustomFont4', serif;
     font-weight: 700;
-    color: #D8436E; /* Deep pink text */
+    color: #D8436E;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
-    border-radius: 15px; /* Match section border-radius */
+    border-radius: 15px;
 }
 
 .accordionHeader:hover {
-    background-color: #FFDDE2; /* Lighter pink on hover */
-    color: #B02C5A; /* Slightly darker pink */
-    transform: translateY(-3px); /* Subtle lift effect */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1); /* Slight shadow on hover */
+    background-color: #FFDDE2;
+    color: #B02C5A;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
 .accordionHeader:active {
-    transform: translateY(0); /* Press down effect */
+    transform: translateY(0);
 }
 
 /* The arrow for the accordion. Your JS manages its content (▲ / ▼). */
@@ -64,108 +260,149 @@
 .accordionContent {
     padding: 20px;
     background-color: #ffffff;
-    border-bottom-left-radius: 15px; /* Match section border-radius */
+    border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 }
 
 /* Project Grid within Accordion Content */
 .projectGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Increased min-width for larger items */
-    gap: 30px; /* More space between project items */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
     padding-top: 10px;
 }
 
 /* --- Project Item and Description Framing --- */
 .downloadItemWrapper {
-    background-color: #fcfcfc; /* Very light background for each item */
-    border: 1px solid #FFEDF0; /* Soft pink border */
-    border-radius: 12px; /* Nicely rounded corners */
-    padding: 20px; /* More padding inside */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* Soft, subtle shadow */
+    background-color: #fcfcfc;
+    border: 1px solid #FFEDF0;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    text-decoration: none; /* Removes underline from the link itself */
-    color: inherit; /* Ensures color inheritance */
+    text-decoration: none;
+    color: inherit;
 }
 
 .downloadItemWrapper:hover {
-    transform: translateY(-8px); /* More pronounced lift on hover */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Deeper shadow on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .projectDetails {
     display: flex;
-    flex-direction: row; /* Image and description side-by-side */
-    align-items: flex-start; /* Align tops of image and description */
-    gap: 20px; /* More space between image and text */
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
     width: 100%;
-    margin-bottom: 20px; /* Space between details and the "View Project" label */
-    flex-wrap: wrap; /* Allow items to wrap to next line on smaller screens */
-    justify-content: center; /* Center items when they wrap */
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .downloadPhotoFrame {
-    flex-shrink: 0; /* Don't allow it to shrink */
-    width: 45%; /* Adjust as needed - percentage of the .projectDetails width */
-    max-width: 200px; /* Maximum width for the image frame */
-    padding: 5px; /* Padding inside the image frame for a border-like effect */
-    border: 2px solid #FFC0CB; /* A cute pink border for the image */
-    border-radius: 10px; /* Rounded corners for the image frame */
+    flex-shrink: 0;
+    width: 45%;
+    max-width: 200px;
+    padding: 5px;
+    border: 2px solid #FFC0CB;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
-    padding-top: 45%; /* Maintain aspect ratio (e.g., 1:1) */
+    padding-top: 45%;
 }
 
 .downloadPhotoFrame img {
     position: absolute;
-    top: 5px; /* Offset for internal padding */
-    left: 5px; /* Offset for internal padding */
-    width: calc(100% - 10px); /* Adjust width for padding */
-    height: calc(100% - 10px); /* Adjust height for padding */
+    top: 5px;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
     object-fit: cover;
-    border-radius: 8px; /* Slightly less rounded than outer frame */
+    border-radius: 8px;
 }
 
 
 .projectDescription {
-    flex-grow: 1; /* Allow it to take up remaining space */
-    text-align: left; /* Align text within description to the left */
-    /* REMOVED: font-size: 1em; as it will be handled by the p tag's clamp */
+    flex-grow: 1;
+    text-align: left;
     color: #555;
     line-height: 1.6;
-    padding: 15px; /* Padding inside the description box */
-    border: 1px dashed #FFDDE2; /* A cute dashed border for the description */
-    border-radius: 10px; /* Rounded corners for the description box */
-    background-color: #FFF9FA; /* Very light pink background for description */
-    max-width: 100%; /* Ensure it doesn't overflow */
+    padding: 15px;
+    border: 1px dashed #FFDDE2;
+    border-radius: 10px;
+    background-color: #FFF9FA;
+    max-width: 100%;
 }
 
 .projectDescription h3 {
     margin-top: 0;
     margin-bottom: 10px;
-    color: #D8436E; /* Match accordion header color */
-    font-size: 1.2em; /* This size is fine, or you could clamp it if needed */
+    color: #D8436E;
+    font-size: 1.2em;
     font-weight: 600;
-    text-decoration: none; /* Explicitly remove underline for h3 */
+    text-decoration: none;
 }
 
 /* NEW: Reactive font-size for the paragraph text inside projectDescription */
 .projectDescription p {
     margin-bottom: 0;
-    text-decoration: none; /* Explicitly remove underline for p */
-    /* Use clamp for responsive font size */
-    /* Adjust min, preferred (vw), and max values as needed for your design */
-    font-size: clamp(0.9rem, 1.8vw, 1.1em); /* Example: Min 0.9rem, Preferred 1.8vw, Max 1.1em */
-    line-height: 1.6; /* Keep good line height for readability */
+    text-decoration: none;
+    font-size: clamp(0.9rem, 1.8vw, 1.1rem); /* Changed 1.1em to 1.1rem for consistency */
+    line-height: 1.6;
 }
 
 
 /* --- Media Queries for Responsiveness --- */
 @media (max-width: 768px) {
+    .photo-frame {
+        width: 90%;
+        height: auto;
+        max-width: 450px;
+        aspect-ratio: 450 / 350;
+        border-width: 6px;
+    }
+
+    .TitleHeader h1 {
+        font-family: 'YourCustomFont', serif;
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+    }
+
+    /* --- Navigation for Phone Sizes (768px and below) --- */
+    .main-nav-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;   /* Center them horizontally when stacked */
+        gap: 1rem;             /* Adjust vertical gap for stacked items */
+    }
+
+    .main-nav-list li a {
+        white-space: normal; /* Allow text to wrap within links */
+        text-align: center; /* Center the text within each stacked link */
+    }
+
+    /* Adjust the home-content-wrapper for smaller screens */
+    .home-content-wrapper {
+        padding: 1rem;
+        width: 95%;
+    }
+
+    .portfolio-row {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .image-box-left,
+    .image-box-right,
+    .text-box-left,
+    .text-box-right {
+        width: 100%;
+    }
+
+    /* Gallery Styles within 768px breakpoint */
     .galleryMainContent {
         padding: 30px;
         margin: 20px auto;
@@ -173,29 +410,32 @@
 
     /* Adjust the accordion header font size for smaller screens */
     .accordionHeader {
-        font-size: clamp(1.5rem, 4vw, 2rem); /* Make header text reactive too */
-        padding: 15px 20px; /* Slightly less padding */
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        padding: 15px 20px;
     }
 
+    /* Gallery Intro Text for this breakpoint.
+       This will override the global clamp for 768px and below.
+       Adjust max 'rem' value if text still gets too big. */
     .galleryIntroText {
-        font-family:yourCustomFont4, serif; /* Use your desired font */
-        font-size: clamp(1.25em, 3vw, 2em); /* Make intro text reactive */
+        font-family: 'YourCustomFont4', serif; /* Corrected: Added quotes */
+        font-size: clamp(1rem, 3vw, 1.5rem); /* Adjusted max to 1.5rem for tighter control */
     }
 
     .projectGrid {
-        grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+        grid-template-columns: 1fr;
     }
 
     .projectDetails {
-        flex-direction: column; /* Stack image and description vertically */
-        align-items: center; /* Center them when stacked */
-        gap: 15px; /* Reduce gap when stacked */
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .downloadPhotoFrame {
-        width: 80%; /* Make image larger when stacked */
-        max-width: 300px; /* Adjust max width as desired */
-        padding-top: 60%; /* Adjust aspect ratio when stacked (e.g., 4:3) */
+        width: 80%;
+        max-width: 300px;
+        padding-top: 60%;
     }
 
     .downloadPhotoFrame img {
@@ -206,32 +446,41 @@
     }
 
     .projectDescription {
-        padding: 12px; /* Slightly less padding inside description box on mobile */
+        padding: 12px;
     }
-    /* The .projectDescription p clamp() rule will handle its own responsiveness */
 }
 
 /* Optional: Additional media query for very small screens */
 @media (max-width: 480px) {
+    .home-content-wrapper {
+        padding: 0.75rem;
+        width: 98%;
+    }
+
+    /* Gallery Styles within 480px breakpoint */
     .galleryMainContent {
         padding: 20px;
         margin: 15px auto;
     }
 
     .accordionHeader {
-        font-size: clamp(1.2rem, 5vw, 1.5rem); /* Even smaller headers */
+        font-size: clamp(1.2rem, 5vw, 1.5rem);
         padding: 12px 15px;
     }
 
+    /* Gallery Intro Text for this breakpoint.
+       This will override the 768px media query clamp for 480px and below.
+       Further adjusted max 'rem' value. */
     .galleryIntroText {
-        font-size: clamp(0.9em, 4vw, 1em);
+        font-family: 'YourCustomFont4', serif; /* Corrected: Added quotes */
+        font-size: clamp(0.9rem, 4vw, 1.2rem); /* Adjusted max to 1.2rem for very small screens */
     }
 
     .downloadPhotoFrame {
-        width: 90%; /* Even larger image on very small screens */
+        width: 90%;
     }
 
     .projectDescription {
-        padding: 10px; /* Minimal padding for description */
+        padding: 10px;
     }
 }
