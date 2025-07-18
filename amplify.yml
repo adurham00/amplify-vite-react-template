@@ -1,8 +1,4 @@
 version: 1
-# Add this new block at the top level, aligned with 'version'
-runtime-versions:
-  nodejs: 20.16.0
-
 backend:
   phases:
     build:
