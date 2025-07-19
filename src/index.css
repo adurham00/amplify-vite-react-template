@@ -43,7 +43,7 @@ body::before {
 /* These custom fonts are likely used across different components/pages */
 @font-face {
     font-family: 'YourCustomFont';
-    src: url('/Fonts/Font2.otf') format('opentype');
+    src: url('/Fonts/Light.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
