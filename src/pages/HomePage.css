@@ -115,6 +115,7 @@
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     transform-origin: center center;
     will-change: transform;
+    justify-content: center;
 }
 
 /* Actual Photo Frame Styles */
@@ -140,6 +141,7 @@
 
 /* --- */
 /* === Portfolio Section Layout (if used later in the scroll on homepage) === */
+/* === Portfolio Section Layout (if used later in the scroll on homepage) === */
 .portfolio {
     display: flex;
     flex-direction: column;
@@ -149,7 +151,9 @@
 .portfolio-row {
     display: flex;
     align-items: flex-start;
-    gap: 8rem;
+    gap: 8rem; /* Keep your desired large gap here for between items when side-by-side */
+    flex-wrap: wrap;       /* Ensures items wrap when space is constrained */
+    justify-content: center; /* Centers items horizontally on their respective lines */
 }
 
 .portfolio-row.reverse {
@@ -157,61 +161,47 @@
 }
 
 .image-box-left,
-.image-box-right {
-    width: 50%;
-    height: auto;
-    background-color: lightgray;
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
-    flex-shrink: 0;
-    padding-bottom: 75%; /* Maintain aspect ratio if content is dynamic */
-}
-
+.image-box-right,
 .text-box-left,
 .text-box-right {
-    width: 50%;
-    height: auto;
-    flex-shrink: 0;
+    /* REMOVE `width: 50%;` and `flex-shrink: 0;` from here */
+
+    /* Use flex-grow and flex-basis for more flexible distribution */
+    flex-grow: 1; /* Allows the item to grow and fill available space */
+    flex-shrink: 1; /* Allows the item to shrink if necessary (default flex-shrink) */
+    
+    /* Calculate flex-basis: This aims for 50% width AFTER accounting for half the gap.
+       When two items are on a line, this ensures (item1 + gap + item2) fits within 100% */
+    flex-basis: calc(50% - 4rem); /* 50% of parent width minus half the 8rem gap */
+
+    height: auto; /* Keep this */
+    background-color: lightgray; /* Keep this */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15); /* Keep this */
+    padding-bottom: 75%; /* Maintain aspect ratio */
+
 }
 
-/* --- */
-
-/* === Media Queries for Home Page Responsiveness === */
+/* --- Media Queries for Home Page Responsiveness === */
 @media (max-width: 768px) {
-    .photo-frame {
-        width: 90%;
-        height: auto;
-        max-width: 450px;
-        aspect-ratio: 450 / 350; /* Maintain original aspect ratio */
-        border-width: 6px;
-    }
-
-    .TitleHeader h1 {
-        font-family: 'YourCustomFont', serif;
-        font-size: clamp(1.5rem, 6vw, 2.5rem);
-    }
-
-    .main-nav-list {
-        gap: clamp(3rem, 4vw, 6rem);
-    }
-
-    /* Adjust the home-content-wrapper for smaller screens */
-    .home-content-wrapper {
-        padding: 1rem; /* Smaller padding on mobile */
-        width: 95%; /* Make it take more width on small screens */
-    }
-
-    /* REMOVED: .content-text font-size override here as clamp() handles it globally */
+    /* ... (other media query styles) ... */
 
     .portfolio-row {
         flex-direction: column; /* Stack elements vertically */
-        gap: 2rem;
+        gap: 2rem; /* Vertical gap when stacked */
+        /* justify-content: center; is still active here from global,
+           which is fine as it acts vertically when flex-direction is column.
+           align-items: center (which you have on .photo-frame-container, and
+           .projectDetails) is what you'd use to center horizontally when column. */
     }
 
     .image-box-left,
     .image-box-right,
     .text-box-left,
     .text-box-right {
-        width: 100%; /* Make them full width */
+        /* When stacked, they should take full width */
+        flex-basis: auto; /* Reset flex-basis or set it to 100% */
+        width: 100%; /* Explicitly set to 100% for stacking */
+        flex-shrink: 0; /* You can put this back here if you don't want them to shrink on mobile */
     }
 }
 
