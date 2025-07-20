@@ -61,7 +61,7 @@ function Gallery() {
 
                 {/* Example Figma Project 2 */}
                 {/* Wrapped the entire downloadItemWrapper with an <a> tag */}
-                <a href="https://www.figma.com/design/hlxXUb4eF3GhTK0Ph0mQbV/Group-7-SUVAS?node-id=0-1&m=dev&t=Jf8VfvAHbHI0ENsf-1" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
+                <a href="https://www.figma.com/proto/hlxXUb4eF3GhTK0Ph0mQbV/Group-7-SUVAS?node-id=0-1&t=N1A70DerQguLYsSW-1" target="_blank" rel="noopener noreferrer" className={styles.downloadItemWrapper}>
                   <div className={styles.projectDetails}>
                     <div className={styles.downloadPhotoFrame}>
                       {/* Removed the <a> tag here - the outer <a> now covers the image */}
@@ -75,7 +75,7 @@ This collaborative CS 256 group project focused on transforming the existing Sou
 
 A key challenge was harmonizing diverse design aesthetics and individual perspectives from team members into one cohesive application. We overcame this through constant communication and an iterative design process. Additionally, we integrated new, user-centric features not present on their original site.
 
-The accompanying link showcases my direct contributions to the app's UI/UX elements (all labeled with names), though I actively contributed ideas and feedback across all project phases. This group experience was a significant inspiration for my subsequent personal redesign of the shelter's website.
+The accompanying link showcases the project and my contributions to the app's UI/UX elements, unfortunatley it is unavailible to view in developer mode since it has been locked by the proffessor, though I actively contributed ideas and feedback across all project phases. This group experience was a significant inspiration for my subsequent personal redesign of the shelter's website.
                       </p>
                     </div>
                   </div>
